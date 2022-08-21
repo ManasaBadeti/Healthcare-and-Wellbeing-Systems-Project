@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/recipe_a.css' %}">
+</head>
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a href="{% url 'foodrecipes_view' %}"> Food recipes </a>
+   <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>VEGETABLE PAELLA RECIPE</h2>
+      </div>
+      <div class="col-8 offset-2">
+        Vegetable paella swaps out the meat for a double dose of veggies<br>Vegetable paella takes inspiration from traditional Spanish-style paella but leaves out the meat and fish and adds extra veggies instead. Our version features peppers, red chile, tomato, and green beans, plus a ton of herbs and spices so that there’s no shortage of flavor. And if you’ve never tried paella, allow us to introduce you to this vibrant Spanish rice dish that originated in the eastern coastal city of Valencia...<br>Traditional paella is typically loaded with seafood, chicken, or meat like spicy chorizo (or a combo!) and it always features an abundance of perfectly cooked rice. Better yet, it’s made and served in one pot, which makes it an ideal pick for a weeknight meal. This vegetarian version is perfect for Meatless Mondays or any day of the week that you feel like getting a little more greens. Plus, this is a dairy-free and vegan recipe, so it fits into a variety of diets. Basically, there’s no reason not to try out this delicious, easy rice dish!
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>HOW TO MAKE HOMEMADE PAELLA</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li>Traditional paella is made in a paella pan, but it’s not necessary for this recipe. Just make sure you have a large (12-inch) skillet. We prefer cast iron because it retains heat and helps form a delicious crust on the bottom of the rice.</li>
+          <li>While we prefer Arborio rice for paella, you can experiment with different types of short- or medium-grain rice if that’s all you have on hand. Read the package’s directions to adjust the cooking time and amount of liquid needed. Note that certain varieties, like brown rice, will take significantly longer to cook.</li>
+          <li>For an added protein boost, stir in a can of chickpeas (rinsed) before serving.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>INGREDIENTS YOU WILL NEED</h3>
+      </div>
+      <div class="col-8 offset-2">
+        These are the ingredients you will need to grab from the store. The full measurements are listed further down below.
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4 offset-2">
+        <ul>
+          <li>2 tbsp. olive oil</li>
+          <li>1 onion, finely chopped</li>
+          <li>1 red pepper, quartered and sliced 1/2 inch thick</li>
+          <li>1 thinly sliced red chile</li>
+          <li>3 cloves garlic, pressed</li>
+          <li>1 medium tomato, chopped</li>
+          <li>1 1/2 c. Arborio rice, or other medium-grain rice</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>1 tbsp. tomato paster</li>
+          <li>1 tsp. sweet paprika</li>
+          <li>1/2 c. dry white wine</li>
+          <li>1 tsp. finely grated lemon zest</li>
+          <li>Kosher salt and pepper</li>
+          <li>4 oz. trimmed green beans</li>
+          <li>Cilantro and lemon wedges, for serving</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>DIRECTIONS</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li>Heat oil in large cast-iron skillet on medium. Add onion and cook, stirring occasionally, until tender, 5 minutes. Add red pepper and red chile and cook, stirring occasionally, 4 minutes. Add garlic and cook 1 minute. Toss with tomato.</li>
+          <li>Stir in Arborio rice. Push rice mixture toward edge of pan to create small opening; add tomato paste and sweet paprika and cook undisturbed 1 minute. Stir wine into mixture, incorporating rice and vegetables, and cook, stirring, until wine is absorbed, 3 minutes.</li>
+          <li>Add 3 cups water, lemon zest and ½ tsp each salt and pepper. Bring to a boil, then reduce heat and simmer, covered, 11 minutes. Top with green beans and cook, covered, until rice is tender and liquid is absorbed, 4 minutes. Top with cilantro and serve with lemon wedges.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

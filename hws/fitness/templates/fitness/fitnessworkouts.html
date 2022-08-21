@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fitnessworkouts.css' %}">
+  <style>
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .yt-card {
+      display: none;
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 50px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    }
+    .yt-player {
+      background-color: pink;
+      margin: 20px 150px;
+      padding: 50px 100px;
+      border-radius: 25px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> Fitness </a>
+    <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col cust-container" id="wr">
+        <p class="box-heading">WARM UP <br/> ROUTINE</p>
+      </div>
+
+      <div class="col cust-container" id="ta">
+        <p class="box-heading">TONED <br/> ARMS</p>
+      </div>
+
+      <div class="col cust-container" id="fs">
+        <p class="box-heading">FLAT <br/> STOMACH</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cust-container" id="yc">
+        <p class="box-heading">YOGA <br/> CHALLENGE</p>
+      </div>
+
+      <div class="col cust-container" id="dw">
+        <p class="box-heading">DANCE <br/> WORKOUTS</p>
+      </div>
+
+      <div class="col cust-container" id="cs">
+        <p class="box-heading">COOLDOWN <br/> STRECHES</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="yt-view" class="yt-card">
+    <span class="close" style="margin-right: 172px; margin-top: 25px;">&times;</span>
+    <div class="yt-player">
+      <h3 id="player-heading"></h3>
+      <iframe id="player" width="800" height="435" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+      var yt = document.getElementById("yt-view");
+      var ht = document.getElementById("player-heading");
+      var pl = document.getElementById("player");
+
+      var btn1 = document.getElementById("wr");
+      var btn2 = document.getElementById("ta");
+      var btn3 = document.getElementById("fs");
+      var btn4 = document.getElementById("yc");
+      var btn5 = document.getElementById("dw");
+      var btn6 = document.getElementById("cs");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      var stopVideo = function ( ) {
+          pl.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+      };
+
+      btn1.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "WARM UP ROUTINE";
+        pl.src = "https://www.youtube.com/embed/j6C-6F6dr-4?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn2.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "TONED ARMS";
+        pl.src = "https://www.youtube.com/embed/iN-AEOs9rzc?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn3.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "FLAT STOMACH";
+        pl.src = "https://www.youtube.com/embed/fWdbo0i8v9g?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn4.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "YOGA CHALLENGE";
+        pl.src = "https://www.youtube.com/embed/rQFgixOtYb8?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn5.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "DANCE WORKOUTS";
+        pl.src = "https://www.youtube.com/embed/ULrcDcQabdA?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn6.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "COOLDOWN STRECHES";
+        pl.src = "https://www.youtube.com/embed/xfDVrv54Lfc?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+
+      span.onclick = function() {
+        yt.style.display = "none";
+        stopVideo();
+      }
+
+      window.onclick = function(event) {
+        if (event.target == yt) {
+          yt.style.display = "none";
+          stopVideo();
+        }
+      }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

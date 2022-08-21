@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/diet.css' %}">
+  <style>
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .yt-card {
+      display: none;
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 50px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    }
+    .yt-player {
+      background-color: pink;
+      margin: 20px 150px;
+      padding: 50px 100px;
+      border-radius: 25px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> Diets </a>
+    <a href="{% url 'dashboard' %}"> Dashboard</a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col cust-container" id="k">
+        <p class="box-heading">KETO <br/> DIET</p>
+      </div>
+
+      <div class="col cust-container" id="v">
+        <p class="box-heading">VEGAN <br/> DIET</p>
+      </div>
+
+      <div class="col cust-container" id="l">
+        <p class="box-heading">LOW-CARB <br/> DIET</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cust-container" id="n">
+        <p class="box-heading">NATURAL <br/> DIET</p>
+      </div>
+
+      <div class="col cust-container" id="a">
+        <p class="box-heading">ATKINS <br/> DIET</p>
+      </div>
+
+      <div class="col cust-container" id="p">
+        <p class="box-heading">PALEO <br/> DIET</p>
+      </div>
+    </div>
+
+  </div>
+  <div id="yt-view" class="yt-card">
+    <span class="close" style="margin-right: 172px; margin-top: 25px;">&times;</span>
+    <div class="yt-player">
+      <h3 id="player-heading"></h3>
+      <iframe id="player" width="800" height="435" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+      var yt = document.getElementById("yt-view");
+      var ht = document.getElementById("player-heading");
+      var pl = document.getElementById("player");
+
+      var btn1 = document.getElementById("k");
+      var btn2 = document.getElementById("v");
+      var btn3 = document.getElementById("l");
+      var btn4 = document.getElementById("n");
+      var btn5 = document.getElementById("a");
+      var btn6 = document.getElementById("p");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      var stopVideo = function ( ) {
+          pl.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+      };
+
+      btn1.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "KETO DIET";
+        pl.src = "https://www.youtube.com/embed/zrRDnLJdjmQ?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn2.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "VEGAN DIET";
+        pl.src = "https://www.youtube.com/embed/nHDdBhwNjAQ?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn3.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "LOW-CARB DIET";
+        pl.src = "https://www.youtube.com/embed/NEuwcKks0Kw?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn4.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "NATURAL DIET";
+        pl.src = "https://www.youtube.com/embed/K3r72CTkHtA?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn5.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "ATKINS DIET";
+        pl.src = "https://www.youtube.com/embed/JYv21zKp9w0?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+      btn6.onclick = function() {
+        yt.style.display = "block";
+        ht.innerHTML = "PALEO DIET";
+        pl.src = "https://www.youtube.com/embed/w07W0D9z6v4?enablejsapi=1&version=3&playerapiid=ytplayer";
+      }
+
+      span.onclick = function() {
+        yt.style.display = "none";
+        stopVideo();
+      }
+
+      window.onclick = function(event) {
+        if (event.target == yt) {
+          yt.style.display = "none";
+          stopVideo();
+        }
+      }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

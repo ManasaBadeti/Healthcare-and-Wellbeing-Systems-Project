@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/recipe_a.css' %}">
+</head>
+<body>
+
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+     <a href="{% url 'logout' %}"> Logout </a>
+    <a href="{% url 'foodrecipes_view' %}"> Food recipes </a>
+   <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>MONGOLIAN CHICKEN</h2>
+      </div>
+      <div class="col-8 offset-2">
+        Enjoy this Mongolian Chicken Recipe for lunch or dinner any day of the week. Tender and juicy chicken cooked in a sweet and savory sauce that’s healthier than the traditional take-out Chinese chicken recipe.</br> </br> This healthy Mongolian Chicken recipe is the perfect way to add more easy chicken recipes to your weeknight dinner menus. Change it up with some juicy, sweet, and savory chicken instead of the same bland chicken dinners you are comfortable cooking. This Mongolian chicken is made healthier, full of flavor, easy to make, and ready in just under 30 minutes. The kids will love it and they are great for meal prepping. Feel free to add some veggies like green beans or broccoli to this Chinese chicken.
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>WHY YOU WILL LOVE THIS EASY ASIAN CHICKEN RECIPE</h2>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li><b>Better than takeout:</b> Enjoy healthier takeout at home. Same great taste and even better. No hidden ingredients and the chicken are not deep-fried.</li>
+          <li><b>Quick and Easy:</b> super easy to make this Mongolian chicken recipe. You need just about 30 minutes or less from start to finish:</li>
+          <li><b>Perfect for meal prepping:</b> This easy chicken recipe is great if you like to meal prep. They store well for up to 4 days.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>INGREDIENTS YOU WILL NEED</h3>
+      </div>
+      <div class="col-8 offset-2">
+        These are just the ingredients you will need to make this asian chicken recipe. Full measurements are listed further down below.
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4 offset-2">
+        <ul>
+          <li>boneless skinless chicken breast  (thinly sliced into 1-2 inch strips)</li>
+          <li>cornstarch or gluten-free flour</li>
+          <li>vegetable oil</li>
+          <li>green onions</li>
+          <li>sesame seed</li>
+          <li>Sauce</li>
+          <li>low-sodium soy sauce</li>
+          <li>honey</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>water or chicken stock</li>
+          <li>garlic cloves</li>
+          <li>fresh ginger</li>
+          <li>red pepper flakes</li>
+          <li>rice vinegar</li>
+          <li>vegetable oil</li>
+          <li>cooked rice of choice</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>HOW TO MAKE MONGOLIAN CHICKEN FROM SCRATCH</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li><b>Prep the chicken:</b> Add the chicken pieces to a large Ziploc bag together with salt, pepper, and cornstarch. Seal and mix through the bag to evenly coat the chicken.</li>
+          <li><b>Cook the chicken:</b> Heat oil in a large frying pan over medium-high heat. Add chicken in a single layer and cook until golden and cooked through, around 8 minutes. Add garlic and cook for another 1-2 minutes.</li>
+          <li><b>Make the sauce:</b>In a small bowl combine all sauce ingredients. Pour the sauce over the cooked chicken into the pan and stir to coat It should take about 2-3 minutes to thicken.</li>
+          <li><b>Serve:</b> Stir in the green onions and sprinkle with sesame seeds. Serve immediately over rice and enjoy!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>RECIPE NOTES AND TIPS</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li><b>Chicken: </b> We much prefer cooking with chicken breast because they are leaner. You may use boneless chicken thighs which will be much tender meat but the calories will vary.</li>
+          <li>Want to use beef instead of chicken, you can. Go for lean cuts of beef.</li>
+          <li>Use low sodium soy sauce or you can swap it for coconut aminos.</li>
+          <li><b>Garlic and ginger:</b>For the best taste and flavor, use fresh garlic and ginger. If you need to work with what you have at home, use 2 tsp garlic powder and 1 tsp ginger.</li>
+          <li><b>Add more veggies: </b>We kept this Mongolian chicken recipe really close to what you would get in a restaurant but you may add other veggies like broccoli, zucchini, mushrooms, red peppers, or green beans to this Asian chicken stir fry.</li>
+          <li><b>Honey:</b>we love using honey but you may use maple syrup. The taste will vary slightly.</li>
+          <li>Nutrition facts do not include the rice.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

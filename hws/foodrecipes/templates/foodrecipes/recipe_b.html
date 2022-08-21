@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/recipe_a.css' %}">
+</head>
+<body>
+
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a href="{% url 'foodrecipes_view' %}"> Food recipes </a>
+   <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>PESTO CHICKEN RECIPE</h2>
+      </div>
+      <div class="col-8 offset-2">
+        Ready in just 30 minutes, this Creamy Pesto Chicken recipe is the perfect skillet dinner for busy weeknights. It’s packed with the vibrant basil pesto flavor and the creamy sauce will make your taste buds happy! <br> Searching for a fast and flavorful dinner? Look no further than this Basil Pesto Chicken! With a creamy 4-ingredient sauce that will surprise your taste buds, it’s the answer to your boring weekday dinner dilemma. So quick and easy to make this healthy chicken dinner recipe for the family. By using prepared basil pesto, there’s minimal prep work. The only thing that needs to be prepared in advance is the chicken marinade, but it takes 2 minutes to pull together. They are low in carbs and a keto-friendly meal.<br>For extra flavor, we definitely recommend topping this with fresh parmesan and more basil. It adds a pop of freshness to the dish. Serve this easy pesto chicken recipe over rice or pasta, with a side salad for a complete meal.
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>WHY YOU’LL LOVE THIS EASY CHICKEN RECIPE</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li><b>Only one pan is</b> necessary. This delicious basil pesto chicken requires just one pan! That means clean-up is breezy.</li>
+          <li><b>Creamy pesto sauce.</b>With basil pesto sauce and an almond milk cream sauce base, you’re left with a delectable, creamy sauce to pour over not only the chicken but rice or quinoa too.</li>
+          <li><b>Great leftovers.</b>This chicken tastes fantastic the next day when the flavors have had even more time to soak in.</li>
+          <li><b>Easy prep.</b> There are only a few steps to get this chicken skillet on your plate! Ready in 30 minutes!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>INGREDIENTS YOU WILL NEED</h3>
+      </div>
+      <div class="col-8 offset-2">
+        These are the ingredients you will need to grab from the store. The full measurements are listed further down below.
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4 offset-2">
+        <ul>
+          <li>Boneless, skinless chicken breasts</li>
+          <li>Kosher salt and fresh ground pepper</li>
+          <li>Basil pesto. You can make your own at home.</li>
+          <li>Extra virgin olive oil</li>
+          <li>Cherry tomatoes</li>
+          <li>Gluten-free flour</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>Garlic cloves</li>
+          <li>Basil pesto or homemade</li>
+          <li>Almond milk</li>
+          <li>Freshly shaved parmesan</li>
+          <li>Fresh basil leaves</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>HOW TO MAKE THIS PESTO CHICKEN RECIPE</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li><b>Place chicken breast</b> in a Ziploc bag. Add in 2 tablespoons basil pesto, salt, and pepper. Seal the bag and gently move the breasts through the bag to get them all nicely coated. </li>
+          <li>Allow the chicken to marinated for at least 1 hour or overnight.</li>
+          <li><b>Heat the oil </b>in a large nonstick skillet. Add marinated chicken and cook for about 5 minutes per side, or until cooked through.</li>
+          <li>Meanwhile, in a small bowl <b>whisk all sauce ingredients</b> until well combined.</li>
+          <li><b>Pour this sauce</b>over the chicken into the pan, and add in the cherry tomatoes.</li>
+          <li><b>Simmer</b> for 5-6 minutes over medium-low heat, until the sauce thickens and the tomatoes burst..</li>
+          <li><b>Garnish</b>with parmesan cheese and fresh basil if desired and enjoy!</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>WHAT TO SERVE WITH PESTO CHICKEN</h3>
+      </div>
+      <div class="col-8 offset-2">
+        This basil pesto chicken breast can be served over rice, quinoa, or pasta. For a lighter option, serve over cauliflower rice. You may also serve with a side salad, and steamed or roasted vegetables. Here are some side dish options to consider serving with this pesto chicken:
+        <ul>
+          <li>Cilantro cauliflower rice</li>
+          <li>Homemade Dinner Rolls</li>
+          <li>Parmesan Oven-roasted asparagus</li>
+          <li>Potatoes Au Gratin</li>
+          <li>Baked Parmesan Potato Wedges</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  
+</body>
+</html>

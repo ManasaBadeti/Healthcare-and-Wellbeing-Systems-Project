@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<style>
+  * {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background: url(14.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  padding-right: 80px;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 0.5px;
+}
+
+.topnav a:hover {
+  background-color: rgb(246, 176, 255);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #b20cb8;
+  color: white;
+}
+
+.heading {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.heading img {
+  width: 500px;
+  height: 300px;
+}
+
+.container {
+  width: 300px;
+  /* height: 500px; */
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 50px 50px;
+}
+.container h1 {
+  color: white;
+  font-weight: 500;
+}
+.container input[type="text"],
+.container input[type="password"],
+.container input[type="number"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container input[type="text"]:focus,
+.container input[type="password"]:focus,
+.container input[type="number"]:focus {
+  width: 280px;
+  border-color: #e43f9f;
+}
+.container input[type="submit"],
+button {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #e43f9f;
+  padding: 14px 25px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  font-size: 18px;
+  font-family: "Libre Baskerville", serif;
+}
+.container input[type="submit"]:hover, button:hover {
+  background: #b20cb8;
+}
+
+/* contactus css */
+.contact {
+  position: relative;
+  /* min-height: 100vh; */
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(connta.jpg);
+  background-size: cover;
+}
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+.contact .content p {
+  font-weight: 300;
+  color: #fff;
+}
+.container1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container1 .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.container1 .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container1 .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container1 .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: black;
+  flex-direction: column;
+  font-weight: 300;
+}
+.container1 .contactInfo .box .text h3 {
+  font-weight: bold;
+  color: black;
+  font-family: sans-serif;
+}
+
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>Vibrant Living</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> WEIGHT </a>
+    <a href="{% url 'dashboard' %}"> Dashboard</a>
+  </div>
+
+  <div class="container" action="" method="GET">
+    <h1>WEIGHT TRACKER</h1>
+    <input type="number" step="0.01" id="weight" name="" placeholder="Weight(in Kg)" required>
+    <input type="number" step="0.01" id="goal-weight" name="" placeholder="Goal weight(in Kg)" required>
+    <input type="number" step="0.01" id="days" name="" placeholder="Days to reach your goal" required>
+    <button onclick="calculatebmi()"> Calculate </button>
+    <div id="bmi-block" style="display: none">
+      <h2 style="color: white;">Burn Calorie per day</h2>
+      <p id="bmi" style="font-family: 'Lobster', cursive; color: white;"></p>
+      <p id="bmi-cat" style="font-family: 'Lobster', cursive; color: white;"></p>
+    </div>
+  </div>
+
+  <script>
+    function calculatebmi() {
+      let calPerKg = 7700;
+      let w = document.getElementById("weight").value;
+      let gw = document.getElementById("goal-weight").value;
+      let days = document.getElementById("days").value;
+
+      let totcal = calPerKg*(w - gw);
+
+      let calPerDay = totcal / days;
+      let cat;
+      let cid = document.getElementById("bmi-cat");
+      if(calPerDay > 1000) {
+        cid.style.color = "red";
+        cat = "Unhealthy weight loss";
+      } else {
+        cid.style.color= "green";
+        cat = "Healthu Weight loss";
+      }
+      document.getElementById("bmi-block").style.display = "block";
+      document.getElementById("bmi").innerHTML = calPerDay.toFixed(0) + " KCal";
+      cid.innerHTML = cat;
+    }
+  </script>
+</body>
+
+</html>

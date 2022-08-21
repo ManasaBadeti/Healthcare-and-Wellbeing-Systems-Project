@@ -1,0 +1,42 @@
+.container {
+  width: 500px;
+}
+
+.textarea {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  /* text-align: left; */
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 400px;
+  height: 200px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.container input[type="text"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 400px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.textarea:focus,
+.container input[type="text"]:focus {
+  width: 480px;
+  border-color: #e43f9f;
+}

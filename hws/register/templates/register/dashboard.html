@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> {{request.user.username}} </a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col cust-container" id="ct">
+        <p class="box-heading"><a href="{% url 'index_view' %}">CALORIE <br/> TRACKER</a></p>
+      </div>
+
+      <div class="col cust-container" id="fw">
+        <p class="box-heading"><a href="{% url 'fitness_view' %}">FITNESS <br/> WORKOUTS</a></p>
+      </div>
+
+      <div class="col cust-container" id="wt">
+        <p class="box-heading"><a href="{% url 'bmi_view' %}">BMI <br/> TRACKER</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cust-container" id="dt">
+        <p class="box-heading"><a href="{% url 'diets_view' %}">CHOOSE <br/> DIET</a></p>
+      </div>
+
+      <div class="col cust-container" id="fr">
+        <p class="box-heading"><a href="{% url 'foodrecipes_view' %}">FOOD <br/> RECIPES</a></p>
+      </div>
+
+      <div class="col cust-container" id="ss">
+        <p class="box-heading"><a href="{% url 'stories_view' %}">SUCCESS <br/> STORIES</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 cust-container" id="wt">
+        <p class="box-heading"><a href="{% url 'weighttrack' %}">Weight <br/> Tracker</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+

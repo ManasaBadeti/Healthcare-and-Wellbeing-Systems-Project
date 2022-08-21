@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+<!--  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">-->
+<!--  <link rel="stylesheet" href="{% static 'css/dss.css' %}">-->
+  <style>
+    * {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        margin: 0px;
+        padding: 0px;
+        background: url("/static/img/fbg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .topnav {
+        background-color: black;
+        overflow: hidden;
+        padding-right: 80px;
+      }
+
+      .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 15px 18px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 0.5px;
+      }
+
+      .topnav a:hover {
+        background-color: rgb(246, 176, 255);
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #b20cb8;
+        color: white;
+      }
+
+      .heading {
+        margin-top: 200px;
+        text-align: center;
+      }
+
+      .heading img {
+        width: 500px;
+        height: 300px;
+      }
+
+      .cust-container {
+        color: black;
+        text-align: center;
+        border-radius: 5px;
+        margin-right: 20px;
+        padding: 75px 30px;
+
+        transition: all .4s ease-in-out;
+      }
+
+      .cust-container:hover {
+        transform: scale(1.1);
+      }
+
+      #ct {
+          background: url("/static/img/ct-1.jpg") center no-repeat;
+      }
+
+      #fw {
+          background: url("/static/img/fw.png") center no-repeat;
+      }
+
+      #wt {
+          background: url("/static/img/wt.jpg") center no-repeat;
+      }
+
+      #dt {
+          background: url("/static/img/dt.jpeg") center no-repeat;
+      }
+
+      #fr {
+          background: url("/static/img/fr.jpeg") center no-repeat;
+      }
+
+      #ss {
+          background: url("/static/img/ss.jpg") center no-repeat;
+      }
+
+      p > a, a:hover, a:focus, a:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .box-heading {
+        font-size: 48px;
+        font-weight: 800;
+        /* width: 85%; */
+        background-color: rgb(0, 0, 0, 0.3);
+        border: solid 2px;
+        color: #b20cb8;
+        text-align: center;
+      }
+
+      .row {
+        margin-bottom: 20px;
+      }
+
+      .container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      #one {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      #two {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      #three {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      #four {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      #five {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      #six {
+          background: url("/static/img/one.jpg") center no-repeat;
+      }
+
+      .story {
+        text-align: center;
+        border: solid 1px;
+        margin: 20px 280px;
+        padding: 10px 10px;
+        border-radius: 25px;
+        background-color: rgb(0, 0, 0, 0.2);
+        transition: all .4s ease-in-out;
+      }
+
+      .story:hover {
+        transform: scale(1.1);
+      }
+
+  </style>
+</head>
+
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> Success stories </a>
+    <a href="{% url 'enterstories' %}"> Enter your story </a>
+    <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <div class="Stories">
+      {% for story in stories %}
+        <div class="story" >
+          <h2 style="font-family: 'Goblin One', cursive;">{{story.title}} </h2>
+          <p style="font-family: 'Pattaya', sans-serif; font-size: 24px;" > {{story.body}}</p>
+        </div>
+
+
+      {% endfor %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

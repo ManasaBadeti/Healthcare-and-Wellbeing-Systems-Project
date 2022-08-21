@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vibrant Living</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round"/>
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+    <style>
+      .abtus {
+        color: black;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .pt {
+        display: inline-block;
+        transition: all .4s ease-in-out;
+      }
+
+      .ht {
+        border: solid 1px;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: rgb(0,0,0, 0.25);
+      }
+      .ht, .ht:hover, .ht:focus, .ht:active {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .pt:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a href="{% url 'contactus' %}"> Contact Us </a>
+      <a href="{% url 'register' %}"> Register </a>
+      <a href="{% url 'login' %}"> Sign In </a>
+      <a class="active" href="#"> Home </a>
+    </div>
+
+    <div class="heading">
+      <img src="https://www.vibrantliving.in/web/image/website/1/logo/Vibrant%20Living?unique=7676f97">
+    </div>
+    <div class="abtus">
+       <div class="pt"><a class="ht" href="{% url 'aboutus' %}">ABOUT US</a></div>
+    </div>
+  </body>
+</html>

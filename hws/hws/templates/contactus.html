@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+ {% load static %}
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Vibrant Living</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!--    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">-->
+<!--    <link rel="stylesheet" href="{% static 'css/contactus.css' %}">-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: url("/static/img/14.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      .contact {
+        position: relative;
+        /* min-height: 100vh; */
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* background: url(connta.jpg); */
+        background-size: cover;
+      }
+      .contact .content {
+        max-width: 800px;
+        text-align: center;
+      }
+      .contact .content h2 {
+        font-size: 40px;
+        font-weight: bold;
+        color: black;
+      }
+      .contact .content p {
+        font-weight: 300;
+        color: #fff;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .container .contactInfo {
+        width: 50%;
+        display: flex;
+        padding-left: 14%;
+        flex-direction: column;
+      }
+      .container .contactInfo .box {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+      }
+      .container .contactInfo .box .icon {
+        min-width: 60px;
+        height: 60px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+      }
+      .container .contactInfo .box .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: black;
+        flex-direction: column;
+        font-weight: 300;
+      }
+      .container .contactInfo .box .text h3 {
+        font-weight: bold;
+        color: black;
+        font-family: sans-serif;
+      }
+
+      .topnav {
+        background-color: black;
+        overflow: hidden;
+        padding-right: 80px;
+      }
+
+      .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 15px 18px;
+        text-decoration: none;
+        font-size: 17px;
+        border-radius: 0.5px;
+      }
+
+      .topnav a:hover {
+        background-color: rgb(246, 176, 255);
+        color: black;
+      }
+
+      .topnav a.active {
+        background-color: #b20cb8;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body style="background-image: url({% static 'img/14.jpg' %});">
+    <div class="topnav">
+      <a class="active" href="#"> Contact Us </a>
+      <a href="{% url 'register' %}"> Register </a>
+      <a href="{% url 'login' %}"> Sign In </a>
+      <a href="{% url 'homepage' %}"> Home </a>
+    </div>
+
+    <section class="contact">
+      <div class="content">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>KLU,Vijayawada</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>190031868@kluniversity.in<br>
+                190030402@kluniversity.in<br>
+                190030116@kluniversity.in
+              </p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>+91 9381549501<br>
+                +91 7095884482<br>
+                +91 6309359340
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

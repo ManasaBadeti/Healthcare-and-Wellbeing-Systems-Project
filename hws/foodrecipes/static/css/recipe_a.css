@@ -1,0 +1,35 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: url("/static/img/fbg.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  padding-right: 80px;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 0.5px;
+}
+
+.topnav a:hover {
+  background-color: rgb(246, 176, 255);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #b20cb8;
+  color: white;
+}

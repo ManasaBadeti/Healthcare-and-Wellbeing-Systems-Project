@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/recipe_a.css' %}">
+</head>
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a href="{% url 'foodrecipes_view' %}"> Food recipes </a>
+   <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>BAJA SALAD RECIPE</h2>
+      </div>
+      <div class="col-8 offset-2">
+        A taste of Spring! <br>This fresh, flavorful salad is a taste of spring.
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>INGREDIENTS YOU WILL NEED</h3>
+      </div>
+      <div class="col-8 offset-2">
+        These are the ingredients you will need to grab from the store. The full measurements are listed further down below.
+      </div>
+      <div class="col-2"></div>
+      <div class="col-4 offset-2">
+        <ul>
+          <li>1/4 c. packed fresh cilantro leaves</li>
+          <li>1 clove garlic</li>
+          <li>2 tbsp. fresh lime juice</li>
+          <li>2 tbsp. liquid from Pickled Red Onions</li>
+          <li>1/4 c. olive oil</li>
+          <li>3 c. coarsely torn romaine lettuce hearts (from 1 head)</li>
+          <li>1 1/2 c. green cabbage, very thinly sliced</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul>
+          <li>4 radishes, cut into matchstick-size strips</li>
+          <li>1 carrot, cut into matchstick-size strips</li>
+          <li>1 c. cherry tomatoes, halved</li>
+          <li>2 small avocados, cut into large chunks</li>
+          <li>1/2 c. coarsely crumbled Cotija cheese or feta cheese</li>
+          <li>3 tbsp. toasted shelled pumpkin seeds (pepitas)</li>
+          <li>1 1/2 c. tortilla chips, coarsely crumbled</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3>DIRECTIONS</h3>
+      </div>
+      <div class="col-8 offset-2">
+        <ul>
+          <li>Make Dressing: In small food processor, process cilantro, garlic, lime juice, and pickled-onion liquid until garlic is minced and cilantro is finely chopped. With machine running, slowly pour in oil until dressing is well blended. Season with kosher salt. Dressing can be made up to 1 day ahead; cover and refrigerate.</li>
+          <li>Make Salad: Just before serving in a large wide bowl or on platter, gently toss romaine, cabbage, radishes, carrot, and tomatoes with enough dressing to coat. Season with salt. Drain pickled onions and scatter over salad. Top with diced avocados, Cotija cheese, pumpkin seeds, and crumbled tortilla chips. Serve immediately.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

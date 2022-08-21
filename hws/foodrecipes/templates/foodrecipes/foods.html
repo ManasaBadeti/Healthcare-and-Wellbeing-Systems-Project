@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vibrant Living</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+  <link rel="stylesheet" href="{% static 'css/foods.css' %}">
+</head>
+
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+    <a class="active" href="#"> Food recipes </a>
+    <a href="{% url 'dashboard' %}"> Dashboard </a>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col cust-container" id="mc">
+        <p class="box-heading"><a href="{% url 'recipe_a' %}">MONGOLIAN<br/> CHICKEN</a></p>
+      </div>
+
+      <div class="col cust-container" id="pc">
+        <p class="box-heading"><a href="{% url 'recipe_b' %}">PESTO <br/> CHICKEN</a></p>
+      </div>
+
+      <div class="col cust-container" id="gs">
+        <p class="box-heading"><a href="{% url 'recipe_c' %}">GREEK <br/> SALAD</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col cust-container" id="bs">
+        <p class="box-heading"><a href="{% url 'recipe_d' %}">BAJA <br/> SALAD</a></p>
+      </div>
+
+      <div class="col cust-container" id="ns">
+        <p class="box-heading"><a href="{% url 'recipe_e' %}">NICOISE<br/>SALAD</a></p>
+      </div>
+
+      <div class="col cust-container" id="vp">
+        <p class="box-heading"><a href="{% url 'recipe_f' %}">VEGETABLE <br/> PAELLA</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+
+</html>

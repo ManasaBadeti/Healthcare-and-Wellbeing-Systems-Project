@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vibrant Living</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+  <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+  <link rel="stylesheet" href="{% static 'css/ss.css' %}">
+</head>
+
+<body>
+  <div class="topnav">
+    <!-- <a href="contactus.html"> Contact Us </a> -->
+    <a href="{% url 'logout' %}"> Logout </a>
+
+    <a class="active" href="#"> Enter your story </a>
+    <a href="{% url 'dashboard' %}"> Dashboard </a>
+  </div>
+
+  <form class="container" action="{% url 'enter_stories' %}" method="POST">
+    {% csrf_token %}
+    <h1>Enter Your Story</h1>
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea class="textarea" name="body" placeholder="Body" required></textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+
+</html>

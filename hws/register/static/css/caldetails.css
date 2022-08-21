@@ -1,0 +1,27 @@
+body {
+  background: url("/static/img/19.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  width: 50%;
+}
+
+.container td, th {
+  color: white;
+  margin-bottom: 5px;
+}
+
+.container th {
+  padding-bottom: 0.7em;
+}
+
+.tot-row {
+  padding-top: 1.4em;
+  padding-bottom: 0.6em;
+  font-size: 24px;
+  font-family: 'Lobster', cursive; font-size: 30px;
+}
